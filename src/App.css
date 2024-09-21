@@ -1,0 +1,424 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styles */
+header {
+  background-color: var(--header-background);
+  color: var(--header-text);
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+header.sticky {
+  background-color: var(--header-sticky-background);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.links a {
+  color: var(--link-color);
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.links a:hover {
+  color: var(--link-hover-color);
+}
+
+.menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-links {
+  display: none;
+}
+
+.mobile-links.active {
+  display: block;
+  background-color: var(--header-background);
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+}
+
+/* Banner Styles */
+.banner {
+  padding: 150px 0 100px;
+  background-color: var(--banner-background);
+  color: var(--banner-text);
+  text-align: left;
+}
+
+.banner h6 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.banner h3 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.banner p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.banner-buttons .btn {
+  background-color: var(--button-background);
+  color: var(--button-text);
+  padding: 10px 20px;
+  text-decoration: none;
+  margin-right: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.banner-buttons .btn:hover {
+  background-color: var(--button-hover-background);
+  color: var(--button-hover-text);
+}
+
+/* Services & Experience Styles */
+.services-experience {
+  padding: 100px 0;
+  background-color: var(--services-background);
+  color: var(--services-text);
+}
+
+.service {
+  padding: 20px;
+  border: 1px solid var(--service-border);
+  background-color: var(--service-background);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service h3 {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.service p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.service .btn {
+  background-color: var(--service-button-background);
+  color: var(--service-button-text);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.service .btn:hover {
+  background-color: var(--service-button-hover-background);
+}
+
+/* Projects Styles */
+.projects {
+  padding: 100px 0;
+  background-color: var(--projects-background);
+  color: var(--projects-text);
+}
+
+.projects .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.projects .title h3 {
+  font-size: 36px;
+}
+
+.projects .title .btn {
+  background-color: var(--projects-button-background);
+  color: var(--projects-button-text);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.projects .title .btn:hover {
+  background-color: var(--projects-button-hover-background);
+  color: var(--projects-button-hover-text);
+}
+
+.project {
+  background-color: var(--project-background);
+  color: var(--project-text);
+  margin-bottom: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project .img-container img {
+  width: 100%;
+  display: block;
+}
+
+.project .description {
+  padding: 20px;
+}
+
+.project .description h4 {
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+.project .description .links {
+  margin-top: 10px;
+}
+
+.project .description .links a {
+  margin-right: 15px;
+  font-size: 24px;
+  color: var(--project-link-color);
+}
+
+.project .description p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Contact Me Styles */
+.contact-me {
+  padding: 100px 0;
+  background-color: var(--contact-background);
+}
+
+.contact-me h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.contact-me form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-me form div {
+  margin-bottom: 20px;
+}
+
+.contact-me form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-me form input,
+.contact-me form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--contact-border);
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+.contact-me form input:focus,
+.contact-me form textarea:focus {
+  border-color: var(--contact-focus-border);
+}
+
+.contact-me form button {
+  background-color: var(--contact-button-background);
+  color: var(--contact-button-text);
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-me form button:hover {
+  background-color: var(--contact-button-hover-background);
+}
+
+/* Footer Styles */
+footer {
+  padding: 50px 0;
+  background-color: var(--footer-background);
+  color: var(--footer-text);
+  text-align: center;
+}
+
+footer .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+footer .links a {
+  color: var(--footer-link-color);
+  margin: 0 15px;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+footer .links a:hover {
+  color: var(--footer-link-hover-color);
+}
+
+footer .copyright {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/* Dark Theme */
+.dark-theme {
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --header-background: #1f1f1f;
+  --header-text: #ffffff;
+  --header-sticky-background: #000000;
+  --link-color: #ffffff;
+  --link-hover-color: #bb86fc;
+  --banner-background: #3700b3;
+  --banner-text: #ffffff;
+  --button-background: #bb86fc;
+  --button-text: #000000;
+  --button-hover-background: #ffffff;
+  --button-hover-text: #000000;
+  --services-background: #1e1e1e;
+  --services-text: #e0e0e0;
+  --service-border: #333;
+  --service-background: #1e1e1e;
+  --service-button-background: #bb86fc;
+  --service-button-text: #000000;
+  --service-button-hover-background: #ffffff;
+  --projects-background: #333;
+  --projects-text: #ffffff;
+  --projects-button-background: #bb86fc;
+  --projects-button-text: #ffffff;
+  --projects-button-hover-background: #ffffff;
+  --projects-button-hover-text: #000000;
+  --project-background: #1e1e1e;
+  --project-text: #e0e0e0;
+  --project-link-color: #bb86fc;
+  --contact-background: #1e1e1e;
+  --contact-border: #333;
+  --contact-focus-border: #bb86fc;
+  --contact-button-background: #bb86fc;
+  --contact-button-text: #000000;
+  --contact-button-hover-background: #ffffff;
+  --footer-background: #1f1f1f;
+  --footer-text: #e0e0e0;
+  --footer-link-color: #bb86fc;
+  --footer-link-hover-color: #ffffff;
+}
+
+/* Light Theme */
+.light-theme {
+  --background-color: #f5f5f5;
+  --text-color: #333;
+  --header-background: #333;
+  --header-text: #ffffff;
+  --header-sticky-background: #000;
+  --link-color: #ffffff;
+  --link-hover-color: #61dafb;
+  --banner-background: #61dafb;
+  --banner-text: #ffffff;
+  --button-background: #ffffff;
+  --button-text: #333;
+  --button-hover-background: #333;
+  --button-hover-text: #ffffff;
+  --services-background: #f5f5f5;
+  --services-text: #333;
+  --service-border: #ddd;
+  --service-background: #ffffff;
+  --service-button-background: #61dafb;
+  --service-button-text: #ffffff;
+  --service-button-hover-background: #333;
+  --projects-background: #333;
+  --projects-text: #ffffff;
+  --projects-button-background: #61dafb;
+  --projects-button-text: #ffffff;
+  --projects-button-hover-background: #ffffff;
+  --projects-button-hover-text: #333;
+  --project-background: #ffffff;
+  --project-text: #333;
+  --project-link-color: #61dafb;
+  --contact-background: #f5f5f5;
+  --contact-border: #ddd;
+  --contact-focus-border: #61dafb;
+  --contact-button-background: #61dafb;
+  --contact-button-text: #ffffff;
+  --contact-button-hover-background: #333;
+  --footer-background: #333;
+  --footer-text: #ffffff;
+  --footer-link-color: #ffffff;
+  --footer-link-hover-color: #61dafb;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--projects-button-background);
+  color: var(--projects-button-text);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.theme-toggle:hover {
+  background-color: var(--projects-button-hover-background);
+  color: var(--projects-button-hover-text);
+}
